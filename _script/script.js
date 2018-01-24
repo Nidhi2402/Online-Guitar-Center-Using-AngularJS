@@ -124,17 +124,26 @@ guitarApp.controller('orderDetail',function($scope, User, $location){
 //    $scope.total = function(){
 //        return $scope.orderedImageDes;
 //    }
-    $scope.buyGuitar = function(){
+    $scope.editInfo = function(){
+        $scope.custom = true;
+        console.log('hi');
+    };
+     $scope.buyGuitar = function(){
          $location.path('/confirm'); 
     };
+    
 });
+   
 
-guitarApp.controller('confirmOrder',function($scope, User){
+guitarApp.controller('confirmOrder',function($scope, User, $location){
     $scope.user = User;
     $scope.orderedImage = $scope.user.slide;
     $scope.orderedImageDes = $scope.user.detail;
     
     
+    $scope.home = function(){
+        $location.path('/home');
+    };
 });
 
 

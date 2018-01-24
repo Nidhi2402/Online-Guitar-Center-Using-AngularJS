@@ -111,7 +111,8 @@
                     </div>
                     <div class="col-6">
                         <span id="price"ng-model="price">{{ orderedImageDes.price }}</span><br />
-                        <span id="total"> {{price}}</span> <br/>
+                        
+                        <span id="total"> {{orderedImageDes.price}}</span> <br/>
 
                     </div>
                 </div>
@@ -119,7 +120,7 @@
             </form>
 
             <button id="placaeOrder" name="Buy" style="float: right;" ng-click="buyGuitar()">Buy</button>
-            <button id="editInfo" name="Edit" style="float: left;">Edit</button>
+            <button id="editInfo" name="Edit" style="float: left;" ng-click="editInfo()">Edit</button>
         </div>
         <div class="col-2"></div>
     </div>
